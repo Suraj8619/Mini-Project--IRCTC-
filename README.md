@@ -75,4 +75,3 @@ Analyze the existing IRCTC website and improve the user interface using modern H
 
 ---
 
-## 📂 Project Structure
