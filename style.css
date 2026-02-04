@@ -1,0 +1,129 @@
+/* Basic Reset & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Light background for contrast */
+    color: #333;
+}
+
+.main-header {
+    background-color: #0079C1; /* IRCTC Blue */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Booking Section */
+.booking-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section h2 {
+    color: #0079C1;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Form Layout - Uses Flexbox for responsiveness */
+.train-search-form {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px;
+    align-items: flex-end; /* Aligns buttons and inputs nicely */
+}
+
+.form-group {
+    flex-grow: 1; /* Allows form groups to take up available space */
+    min-width: 150px; /* Ensures minimum width for smaller screens */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.form-group input, .form-group select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #0079C1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 121, 193, 0.3);
+}
+
+/* Buttons */
+.search-button {
+    background-color: #FF5722; /* A vibrant, actionable color (Orange/Red) */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-grow: 2; /* Make the search button stand out */
+    min-width: 180px;
+}
+
+.search-button:hover {
+    background-color: #E64A19;
+}
+
+.swap-button {
+    background: none;
+    border: 1px solid #ccc;
+    color: #555;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-bottom: 5px; /* Adjust alignment with inputs */
+    align-self: flex-end;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .train-search-form {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        align-items: stretch;
+    }
+    
+    .swap-button {
+        /* Hides or places the swap button less prominently on tiny screens */
+        align-self: center;
+        margin: 10px 0;
+    }
+}
